@@ -237,7 +237,7 @@
 
     
         <meta property="article:published_time" content="Wed Feb 17 2021 19:44:15 GMT+0900">
-        <meta property="article:modified_time" content="Wed Feb 17 2021 19:44:48 GMT+0900">
+        <meta property="article:modified_time" content="Wed Feb 17 2021 19:45:10 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -260,7 +260,7 @@
     "mainEntityOfPage": "https://www.narihiroch.tk/2021/02/17/DoT-DoH-on-iOS14-and-macOS11/index.html",
     "headline": "為 iOS 14 和 macOS 11 配置 DNS over HTTPS/TLS",
     "datePublished": "Wed Feb 17 2021 19:44:15 GMT+0900",
-    "dateModified": "Wed Feb 17 2021 19:44:48 GMT+0900",
+    "dateModified": "Wed Feb 17 2021 19:45:10 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "Narihiro",
@@ -484,7 +484,7 @@
 <h5 id="如何選擇-DoH-DoT"><a href="#如何選擇-DoH-DoT" class="headerlink" title="如何選擇 DoH/DoT"></a>如何選擇 DoH/DoT</h5><p>從保護隱私以及防止中間人攻擊的角度來說，他們沒有任何區別。但是：</p>
 <ul>
 <li>DoH 將 DNS 流量偽裝成一般 HTTPS 流量，更加難以鑒別。而 DoT 則會請求一個特殊的端口 853.</li>
-<li>DoT 採用傳輸層安全協議（TLS），比 HTTPS 低一個層級，因此可能會比 DoH 更快，性能更好。但實際上二者差異極小。</li>
+<li>DoT 採用傳輸層安全協議（TLS），比 HTTPS 低一個層級，因此理論上會比 DoH 更快，性能更好。但實際上二者差異極小。</li>
 </ul>
 <p>故個人來說更加推薦 DoH。</p>
 <h5 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h5><p>DoH 與 DoT 僅能對 DNS 流量進行加密，但你訪問的網站可能會通過其他方式洩露，比如 TLS 協議本身。雖然TLS可以隱藏用戶通訊的<em>內容</em>，但其並不能總是隱藏與用戶通訊的<em>對象</em>。 比如TLS握手可以攜帶一個叫做加密服務器名稱指示（SNI）的擴展, 這個擴展幫助客戶端告訴服務器其想要訪問的網站的域名。 而所有將 SNI 一併加密的流量在中國內地都將被封鎖<a target="_blank" rel="noopener" href="https://gfw.report/blog/gfw_esni_blocking/zh/">^1</a>，因此想要完全隱藏自己的瀏覽痕跡在中國內地是不可能的。</p>
