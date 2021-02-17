@@ -46,7 +46,7 @@
     
     <title>
         
-            馬桶蓋 | 
+            為 iOS 14 和 macOS 11 配置 DNS over HTTPS/TLS | 
         
         Atelier Narihiro
     </title>
@@ -57,7 +57,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",隨想">
+    <meta name="keywords" content=",數字生活">
     <meta name="theme-color" content="#413583">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -213,7 +213,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Atelier Narihiro">
-    <meta name="msapplication-starturl" content="https://www.narihiroch.tk/2019/04/19/%E9%A6%AC%E6%A1%B6%E8%93%8B/">
+    <meta name="msapplication-starturl" content="https://www.narihiroch.tk/2021/02/17/DoT-DoH-on-iOS14-and-macOS11/">
     <meta name="msapplication-navbutton-color" content="#413583">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Atelier Narihiro">
@@ -228,16 +228,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://www.narihiroch.tk/2019/04/19/%E9%A6%AC%E6%A1%B6%E8%93%8B/">
+    <meta property="og:url" content="https://www.narihiroch.tk/2021/02/17/DoT-DoH-on-iOS14-and-macOS11/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="馬桶蓋 | Atelier Narihiro">
+    <meta property="og:title" content="為 iOS 14 和 macOS 11 配置 DNS over HTTPS/TLS | Atelier Narihiro">
     <meta property="og:image" content="/img/bddvdjacket_shokaiUpRGBnoise_scaleLevel3x3.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="隨想"> 
+    <meta property="og:article:tag" content="數字生活"> 
 
     
-        <meta property="article:published_time" content="Fri Apr 19 2019 00:31:44 GMT+0900">
-        <meta property="article:modified_time" content="Sun Aug 02 2020 23:02:20 GMT+0900">
+        <meta property="article:published_time" content="Wed Feb 17 2021 19:44:15 GMT+0900">
+        <meta property="article:modified_time" content="Wed Feb 17 2021 19:44:48 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -245,7 +245,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://www.narihiroch.tk/2019/04/19/%E9%A6%AC%E6%A1%B6%E8%93%8B/index.html" />
+        <link rel="canonical" href="https://www.narihiroch.tk/2021/02/17/DoT-DoH-on-iOS14-and-macOS11/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -257,10 +257,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://www.narihiroch.tk/2019/04/19/%E9%A6%AC%E6%A1%B6%E8%93%8B/index.html",
-    "headline": "馬桶蓋",
-    "datePublished": "Fri Apr 19 2019 00:31:44 GMT+0900",
-    "dateModified": "Sun Aug 02 2020 23:02:20 GMT+0900",
+    "mainEntityOfPage": "https://www.narihiroch.tk/2021/02/17/DoT-DoH-on-iOS14-and-macOS11/index.html",
+    "headline": "為 iOS 14 和 macOS 11 配置 DNS over HTTPS/TLS",
+    "datePublished": "Wed Feb 17 2021 19:44:15 GMT+0900",
+    "dateModified": "Wed Feb 17 2021 19:44:48 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "Narihiro",
@@ -278,7 +278,7 @@
             "url": "/img/bddvdjacket_shokaiUpRGBnoise_scaleLevel3x3.png"
         }
     },
-    "keywords": ",隨想",
+    "keywords": ",數字生活",
     "description": "",
 }
 </script>
@@ -338,6 +338,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-DoH-DoT"><span class="post-toc-text">什麼是 DoH&#x2F;DoT</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%88%91%E5%9C%A8%E5%93%AA%E8%A3%A1%E5%8F%AF%E4%BB%A5%E7%8D%B2%E5%8F%96-profile%EF%BC%9F"><span class="post-toc-text">我在哪裡可以獲取 profile？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%A6%82%E4%BD%95%E9%81%B8%E6%93%87-DoH-DoT"><span class="post-toc-text">如何選擇 DoH&#x2F;DoT</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="post-toc-text">注意</span></a></li></ol>
+    </ul>
+    
 
 
 
@@ -367,7 +376,7 @@
         
     
             <p class="article-headline-p">
-                馬桶蓋
+                為 iOS 14 和 macOS 11 配置 DNS over HTTPS/TLS
             </p>
         </div>
 
@@ -386,7 +395,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Narihiro</strong>
-        <span>Apr 19, 2019</span>
+        <span>Feb 17, 2021</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -410,7 +419,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/%E9%9A%A8%E6%83%B3/" rel="tag">隨想</a>
+        <a class="post_tag-none-link" href="/tags/%E6%95%B8%E5%AD%97%E7%94%9F%E6%B4%BB/" rel="tag">數字生活</a>
     </ul>
     
 
@@ -430,7 +439,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=馬桶蓋&url=https://www.narihiroch.tk/2019/04/19/%E9%A6%AC%E6%A1%B6%E8%93%8B/index.html&via=Narihiro" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=為 iOS 14 和 macOS 11 配置 DNS over HTTPS/TLS&url=https://www.narihiroch.tk/2021/02/17/DoT-DoH-on-iOS14-and-macOS11/index.html&via=Narihiro" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -451,7 +460,7 @@
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://www.narihiroch.tk/2019/04/19/%E9%A6%AC%E6%A1%B6%E8%93%8B/index.html&text=馬桶蓋" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://www.narihiroch.tk/2021/02/17/DoT-DoH-on-iOS14-and-macOS11/index.html&text=為 iOS 14 和 macOS 11 配置 DNS over HTTPS/TLS" target="_blank">
             <li class="mdl-menu__item">
                 Share to Telegram
             </li>
@@ -467,14 +476,19 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>也許會感到非常突然，但實際上我到現在都沒有用過一次智能馬桶蓋。其他家裏安裝了智能馬桶蓋的人，不知道有沒有用過那些功能呢？</p>
-<p>要説爲什麽，其實原因很簡單——在小學時家裏剛裝馬桶蓋的時候，</p>
-<p>「不要按那上面的按鈕。」</p>
-<p>被家長如此教育過。實際上，正是因爲有了這句警告，才有了後來我出於好奇隨便按下一個按鈕，導致厠所滿地是水的故事。當時被家長批評的場景仍然歷歷在目。正因此，對於那些按鈕，我從心底感受到一種警戒感：絕對不能去按。</p>
-<p>當然在這裏用出道這個詞是很奇怪的，但我覺得這很合適——馬桶蓋出道。有時我會想，也許我用馬桶蓋的用法和其他人都不一樣，畢竟我也沒有見過別人上厠所的樣子。其他人都是什麽時候馬桶蓋出道的呢？</p>
-<p>實際上，有很多本身是被家長或者老師所禁止的事情（但并不是違法的事情），在不經意間自己便已經無視了那些説教，。每當第一次打破一條新的規定的時候，内心總會有一種强烈的背德感。</p>
-<p>在不久的將來，大概三個月以後，飲酒的限制即將解除。這可以算是「被禁止的事物」的典型了吧。終於可以堂堂正正的去買酒了。到目前爲止即使是參加社團的酒會我也一直是以未成年喝不了酒爲理由在一邊一個人喝著軟飲。能堅持20年下來其實我覺得我也挺厲害的。第一次喝酒會是什麽樣的感受呢？</p>
-<p>我想，在那之前，在成年之前，至少先嘗試著去按一次那個按鈕。</p>
+        <p>在去年（2020 年）的 WWDC 中 Apple 終於宣布為 iOS 14 和 macOS 11 添加系統級的 DNS over HTTPS/TLS (DoH/DoT) 支援。儘管此前 macOS 已經有程式實現了對部分 DNS 流量進行加密，現在你可以通過系統接口進行全局 DNS 流量加密。</p>
+<h5 id="什麼是-DoH-DoT"><a href="#什麼是-DoH-DoT" class="headerlink" title="什麼是 DoH/DoT"></a>什麼是 DoH/DoT</h5><p>這個問題需要從什麼是 DNS 開始說起。DNS 的前身其實是 HOST 文件，用來指示域名所對應的 IP 地址。不過由於互聯網迅速發展，HOST 文件的體積以及時效性成為了較大的問題。因此，Paul Mockapetris 博士發明了 DNS，作為專門用於映射域名和 IP 地址的分布式數據庫就此誕生。而 DNS 服務誕生時是沒有包含任何加密協議的，換句話說，你所請求的域名和 DNS 伺服器所返回的 IP 地址都將以明文的形式在網路上傳播。你所路由過的任何節點都可以知道你試圖訪問過哪些網站。這些節點包括但不限於你家中的路由器，你的網路服務商等。同時，DNS 的明文傳播不僅有隱私洩露的風險，還容易遭到中間人攻擊，攻擊者可以將請求的域名映射到錯誤的 IP 地址上，以進一步進行攻擊。</p>
+<p>為了解決這個問題，2016 年發布的 RFC 7858 定義了 DNS over TLS 標準，旨在通過傳輸層安全協議（TLS）來加密 DNS 流量，而 2018 年，Google 和 Mozilla 基金會公佈了 DNS over HTTPS 方案，以 HTTPS 協議來進行 DNS 請求。無論哪一種都可以有效防止 DNS 監聽以及中間人攻擊。Mozilla 在 Firefox 62  正式版中加入了 DoH 功能，可以另 Firefox 內部產生的 DNS 請求均經過加密協議傳輸。而對 Firefox 外部產生的 DNS 請求，僅靠瀏覽器設置顯然是不夠的。因此 Google 在 Android Pie 中添加了系統級的 DoH/DoT 支援，可以通過設置中的「Private DNS」功能來指定（不同 Android UI 可能不同）。Microsoft 則在 2019 年 11 月宣布未來的 windows 將支援 DoH 機能，目前在 insider channel 已經可以使用。Apple 則是在 2020 年的 WWDC 中宣布 iOS 14 和 macOS 11 將支援 DoH 與 DoT，但並未提供開關或相關設置來啟用，需要通過安裝 profile 才可以啟用。</p>
+<h5 id="我在哪裡可以獲取-profile？"><a href="#我在哪裡可以獲取-profile？" class="headerlink" title="我在哪裡可以獲取 profile？"></a>我在哪裡可以獲取 profile？</h5><p><a target="_blank" rel="noopener" href="https://github.com/paulmillr/encrypted-dns">https://github.com/paulmillr/encrypted-dns</a></p>
+<p>在這裡有現成的 profile 提供，包含了 AdGuard, Alekberg, Alibaba, Canadian Shield, Cloudflare, DNSPod, Google, Open DNS, Quad9, Tiar.app 等多家 DNS 提供商。</p>
+<h5 id="如何選擇-DoH-DoT"><a href="#如何選擇-DoH-DoT" class="headerlink" title="如何選擇 DoH/DoT"></a>如何選擇 DoH/DoT</h5><p>從保護隱私以及防止中間人攻擊的角度來說，他們沒有任何區別。但是：</p>
+<ul>
+<li>DoH 將 DNS 流量偽裝成一般 HTTPS 流量，更加難以鑒別。而 DoT 則會請求一個特殊的端口 853.</li>
+<li>DoT 採用傳輸層安全協議（TLS），比 HTTPS 低一個層級，因此可能會比 DoH 更快，性能更好。但實際上二者差異極小。</li>
+</ul>
+<p>故個人來說更加推薦 DoH。</p>
+<h5 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h5><p>DoH 與 DoT 僅能對 DNS 流量進行加密，但你訪問的網站可能會通過其他方式洩露，比如 TLS 協議本身。雖然TLS可以隱藏用戶通訊的<em>內容</em>，但其並不能總是隱藏與用戶通訊的<em>對象</em>。 比如TLS握手可以攜帶一個叫做加密服務器名稱指示（SNI）的擴展, 這個擴展幫助客戶端告訴服務器其想要訪問的網站的域名。 而所有將 SNI 一併加密的流量在中國內地都將被封鎖<a target="_blank" rel="noopener" href="https://gfw.report/blog/gfw_esni_blocking/zh/">^1</a>，因此想要完全隱藏自己的瀏覽痕跡在中國內地是不可能的。</p>
+<p>此外，DoH 與 DoT 僅能保證不將內容洩露給第三者，暨無法防止 DNS 服務商自身作惡。當然，這是很容易想像的。因此這種時候只能選擇相對可靠的 DNS 提供商，比如 Cloudflare 等。或者你也可以選擇設置自己的 eDNS 服務器，就像以前人們使用自己的 HOST 文件那樣，將 DNS 流量封鎖在內網中，自然便不再怕被他人監聽。</p>
 
         
     
@@ -495,21 +509,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/04/27/%E6%A0%A1%E5%9C%92%E7%B6%B2/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2019/04/19/%E7%85%A7%E7%9B%B8/" id="post_nav-older" class="next-content">
+        <a href="/2021/02/15/Two-love-stories-from-Sugaru-Miaki/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
